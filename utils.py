@@ -1,10 +1,9 @@
 import numpy as np
-from tensorflow.keras.applications import VGG19
+from tensorflow.keras.applications import MobileNetV2
 from tensorflow.keras.preprocessing import image
-from tensorflow.keras.applications.vgg19 import preprocess_input, decode_predictions
+from tensorflow.keras.applications.mobilenet_v2 import preprocess_input, decode_predictions
 
-# Load pretrained model
-model = VGG19(weights="imagenet")
+model = MobileNetV2(weights="imagenet")
 
 def preprocess(img_path):
     img = image.load_img(img_path, target_size=(224, 224))
