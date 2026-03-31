@@ -1,21 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>VGG19 Classifier</title>
-</head>
-<body>
-
-    <h1>Upload Image</h1>
-
-    <form method="POST" enctype="multipart/form-data">
-        <input type="file" name="file">
-        <button type="submit">Predict</button>
-    </form>
-
-    {% if result %}
-        <h2>{{ result }}</h2>
-        <img src="{{ img_path }}" width="200">
-    {% endif %}
-
-</body>
-</html>
+flask
+tensorflow==2.12.0
+numpy
+pillow
+gunicorn
