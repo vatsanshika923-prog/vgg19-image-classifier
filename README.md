@@ -17,3 +17,6 @@ A deep learning web app that classifies images using MobileNetV2 trained on Imag
 ## Deployment
 Optimized for low-memory environments using MobileNetV2.
 http://127.0.0.1:5000/ (locally deployed link)
+
+
+https://vgg19-image-classifier.onrender.com(render deployed link)
