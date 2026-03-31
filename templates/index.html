@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VGG19 Classifier</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background: #f4f4f4;
+        }
+        .box {
+            margin-top: 50px;
+            padding: 20px;
+            background: white;
+            display: inline-block;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        button {
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h1>VGG19 Image Classifier</h1>
+
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file"><br><br>
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if result %}
+        <h2>Predictions:</h2>
+        <ul>
+            {% for r in result %}
+                <li>{{ r }}</li>
+            {% endfor %}
+        </ul>
+        <img src="{{ img_path }}" width="250">
+    {% endif %}
+</div>
+
+</body>
+</html>
